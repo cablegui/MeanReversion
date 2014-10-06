@@ -51,3 +51,9 @@ TS_clean_jumps31day <- as.xts(TS_clean$NYM_NGA31D[which(abs(logReturns31day) < E
 adfTest31day <- adf.test(na.omit(coredata(TS_clean_jumps31day)))
 p_val31day <- adfTest$p.value
 p_val31day
+
+#Run adf test on log time series. Null hypothesis is non stationary
+adfTest31dayLog <- adf.test(na.omit(coredata(log(TS_clean_jumps31day))))
+p_val31dayLog <- adfTest$p.value
+p_val31dayLog
+

@@ -30,3 +30,23 @@ loaded via a namespace (and not attached):
 
 #### Data Gathering
 
+Data for Nymex futures is stored in https://raw.githubusercontent.com/cablegui/MeanReversion/master/data/nym_ngatimeseries.csv
+  
+This is downloaded using the repmis package function source_data developed by Christopher Gandrud.
+
+#### Data cleaning
+
+- Data which has duplicate dates is removed.
+- NA's are replaced with the t-1 data
+
+#### Jump event detection for nymex 31 day
+
+- Jump events represented as 3 times the standard deviation of the daily log returns
+- Time series where the log returns are less than the 3 std mark are retained
+
+#### Augmented dickey fuller test
+
+- Run the adf.test function on the resulting time series
+- RUn the adf.test function on the log of the time series
+
+Results show that the p-value of slightly greater than 0.05 means that the data is slightly stationary
