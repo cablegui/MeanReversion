@@ -1,17 +1,32 @@
-Test file
+Mean Reversion testing
 ========================================================
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+The code and data has been put up on my github account for easy access to public.
 
-When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r}
-summary(cars)
+### Following sessionInfo used for this test
+
+```
+R version 3.0.3 (2014-03-06)
+Platform: i386-w64-mingw32/i386 (32-bit)
+
+locale:
+[1] LC_COLLATE=English_United Kingdom.1252  LC_CTYPE=English_United Kingdom.1252    LC_MONETARY=English_United Kingdom.1252
+[4] LC_NUMERIC=C                            LC_TIME=English_United Kingdom.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] repmis_0.3
+
+loaded via a namespace (and not attached):
+ [1] digest_0.6.4      httr_0.3          plyr_1.8.1        R.cache_0.10.0    R.methodsS3_1.6.1 R.oo_1.18.0      
+ [7] R.utils_1.33.0    Rcpp_0.11.1       RCurl_1.95-4.1    rJava_0.9-6       stringr_0.6.2     tools_3.0.3      
+[13] xlsx_0.5.5        xlsxjars_0.6.0   
 ```
 
-You can also embed plots, for example:
+### Explanation of the code
 
-```{r fig.width=7, fig.height=6}
-plot(cars)
-```
+#### Data Gathering
 
